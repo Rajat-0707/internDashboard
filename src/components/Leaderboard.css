@@ -1,0 +1,192 @@
+.leaderboard-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.leaderboard-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.leaderboard-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.leaderboard-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.leaderboard-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-item.current-user {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-color: #0ea5e9;
+  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.1);
+}
+
+.rank-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 60px;
+}
+
+.rank-icon {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.user-avatar-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-circle-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.current-user-badge {
+  background: #0ea5e9;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.user-email {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.referral-code {
+  color: #667eea;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.donation-info {
+  text-align: right;
+  min-width: 120px;
+}
+
+.donation-amount-small {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+}
+
+.currency-small {
+  font-size: 16px;
+  font-weight: 600;
+  color: #059669;
+}
+
+.amount-small {
+  font-size: 24px;
+  font-weight: 700;
+  color: #059669;
+  margin-left: 2px;
+}
+
+.donation-label {
+  color: #64748b;
+  font-size: 12px;
+  margin: 0;
+}
+
+.leaderboard-footer {
+  text-align: center;
+  margin-top: 32px;
+  padding: 16px;
+  background: #f0f9ff;
+  border-radius: 8px;
+  border: 1px solid #bae6fd;
+}
+
+.leaderboard-footer p {
+  color: #0369a1;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .leaderboard-card {
+    padding: 20px;
+  }
+  
+  .leaderboard-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .rank-section {
+    flex-direction: row;
+    gap: 12px;
+  }
+  
+  .donation-info {
+    text-align: center;
+  }
+  
+  .user-name {
+    justify-content: center;
+  }
+} 
