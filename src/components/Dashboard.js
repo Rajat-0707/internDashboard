@@ -11,35 +11,35 @@ const Dashboard = ({ userData, onLogout }) => {
       name: 'Bronze Badge',
       description: 'Raise $500 in donations',
       unlocked: userData.totalDonations >= 500,
-      icon: '🥉'
+      icon: ''
     },
     {
       id: 2,
       name: 'Silver Badge',
       description: 'Raise $1000 in donations',
       unlocked: userData.totalDonations >= 1000,
-      icon: '🥈'
+      icon: ''
     },
     {
       id: 3,
       name: 'Gold Badge',
       description: 'Raise $2000 in donations',
       unlocked: userData.totalDonations >= 2000,
-      icon: '🥇'
+      icon: ''
     },
     {
       id: 4,
       name: 'Referral Master',
       description: 'Get 10 people to use your referral code',
       unlocked: false,
-      icon: '👥'
+      icon: ''
     },
     {
       id: 5,
       name: 'Top Performer',
       description: 'Reach top 5 on leaderboard',
       unlocked: userData.rank <= 5,
-      icon: '🏆'
+      icon: ''
     }
   ];
 
@@ -73,7 +73,7 @@ const Dashboard = ({ userData, onLogout }) => {
       <div className="main-content">
         <div className="container">
           <div className="page-header">
-            <h1 className="page-title">Welcome back, {userData.name}! 👋</h1>
+            <h1 className="page-title">Welcome back, {userData.name}! </h1>
             <p className="page-subtitle">Track your progress and unlock rewards</p>
           </div>
 
@@ -129,7 +129,7 @@ const Dashboard = ({ userData, onLogout }) => {
               <p className="progress-text">
                 {userData.totalDonations < 2000 
                   ? `$${2000 - userData.totalDonations} more to Gold Badge`
-                  : 'Gold Badge unlocked! 🎉'
+                  : 'Gold Badge unlocked! '
                 }
               </p>
             </div>
@@ -149,7 +149,7 @@ const Dashboard = ({ userData, onLogout }) => {
                       <p>{reward.description}</p>
                     </div>
                     <div className="reward-status">
-                      {reward.unlocked ? '✅' : '🔒'}
+                      {reward.unlocked ? '' : ''}
                     </div>
                   </div>
                 ))}
